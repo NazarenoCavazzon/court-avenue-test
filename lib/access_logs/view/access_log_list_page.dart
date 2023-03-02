@@ -55,14 +55,6 @@ class _AccessLogListViewState extends State<AccessLogListView> {
                 child: CircularProgressIndicator(),
               );
             case AccessLogsStatus.success:
-              if (state.accessLogs.isEmpty) {
-                return Center(
-                  child: Text(
-                    context.l10n.noAccessLogs,
-                    style: const TextStyle(fontSize: 20),
-                  ),
-                );
-              }
               return AccessLogList(state.accessLogs);
             case AccessLogsStatus.failure:
               return Center(
