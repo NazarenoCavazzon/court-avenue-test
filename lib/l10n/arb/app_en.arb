@@ -3,5 +3,45 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "login": "Login",
+    "@login": {
+        "description": "Text shown on the login button and appbar"
+    },
+    "username": "Username",
+    "@username": {
+        "description": "Text shown on the username field"
+    },
+    "password": "Password",
+    "@password": {
+        "description": "Text shown on the password field"
+    },
+    "accessLogs": "Access Logs",
+    "@accessLogs": {
+        "description": "Text shown on the access logs button and appbar"
+    },
+    "textFormFieldEmptyError": "This field cannot be empty",
+    "@textFormFieldEmptyError": {
+        "description": "Text shown when a text form field is empty"
+    },
+    "youMustEnterAllTheFields": "You must enter all the fields",
+    "@youMustEnterAllTheFields": {
+        "description": "Text shown when the user tries to login without entering all the fields"
+    },
+    "date": "Date",
+    "@date": {
+        "description": "Text shown on the date column of the access logs table"
+    },
+    "accessLog": "Access Log",
+    "@accessLog": {
+        "description": "Used in the access_log_page appbar"
+    },
+    "accessLogList": "Access Log List",
+    "@accessLogList": {
+        "description": "Used in the access_log_list_page appbar"
+    },
+    "noAccessLogs": "No access logs",
+    "@noAccessLogs": {
+        "description": "Text shown when there are no access logs"
     }
 }

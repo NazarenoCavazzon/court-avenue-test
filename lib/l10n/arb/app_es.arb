@@ -3,5 +3,45 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
+    },
+    "login": "Iniciar sesión",
+    "@login": {
+        "description": "Texto mostrado en el botón de inicio de sesión y appbar"
+    },
+    "username": "Nombre de usuario",
+    "@username": {
+        "description": "Texto mostrado en el campo de nombre de usuario"
+    },
+    "password": "Contraseña",
+    "@password": {
+        "description": "Texto mostrado en el campo de contraseña"
+    },
+    "accessLogs": "Logs de accesos",
+    "@accessLogs": {
+        "description": "Texto mostrado en el botón de logs de accesos y appbar"
+    },
+    "textFormFieldEmptyError": "Este campo no puede estar vacío",
+    "@textFormFieldEmptyError": {
+        "description": "Texto mostrado en los text fields cuando están vacíos"
+    },
+    "youMustEnterAllTheFields": "Debes ingresar todos los datos",
+    "@youMustEnterAllTheFields": {
+        "description": "Texto mostrado en la leyenda cuando no se ingresan todos los datos"
+    },
+    "date": "Fecha",
+    "@date": {
+        "description": "Usado para indicar la fecha en los logs de accesos"
+    },
+    "accessLog": "Log de acceso",
+    "@accessLog": {
+        "description": "Usado para el appbar del access_log_page"
+    },
+    "accessLogList": "Lista de logs de acceso",
+    "@accessLogList": {
+        "description": "Usado para el appbar del access_log_list_page"
+    },
+    "noAccessLogs": "No hay logs de acceso",
+    "@noAccessLogs": {
+        "description": "Usado para indicar que no hay logs de acceso"
     }
 }
