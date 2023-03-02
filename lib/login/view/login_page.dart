@@ -131,8 +131,7 @@ class _LoginViewState extends State<LoginView> {
   }
 
   void login() {
-    final state = context.read<LoginCubit>().state;
-    if (_formKey.currentState!.validate() && !state.isLoading) {
+    if (_formKey.currentState!.validate()) {
       context.read<LoginCubit>().login(_usernameController.text);
     }
   }
