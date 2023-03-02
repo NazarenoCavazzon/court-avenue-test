@@ -67,9 +67,7 @@ class _LoginViewState extends State<LoginView> {
                   if (state.isSuccess) {
                     Navigator.of(context).push<void>(
                       CupertinoPageRoute(
-                        builder: (_) => AccessLogPage(
-                          accessLog: state.accessLog,
-                        ),
+                        builder: (_) => AccessLogPage(state.accessLog),
                       ),
                     );
                   }
@@ -134,7 +132,7 @@ class _LoginViewState extends State<LoginView> {
 
   void login() {
     if (_formKey.currentState!.validate()) {
-      context.read<LoginCubit>().login(username: _usernameController.text);
+      context.read<LoginCubit>().login(_usernameController.text);
     }
   }
 }

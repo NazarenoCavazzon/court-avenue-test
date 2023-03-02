@@ -34,25 +34,29 @@ class DataPersistence {
 
   /// Adds a new user to the database. If the user already exists, it updates
   /// the log_date to the current date.
-  Future<AccessLog?> createLog(String username) async {
+  Future<AccessLog> createLog(String username) async {
+    final shadowDB = db;
     final date = DateTime.now();
 
-    final id = await db?.insert(logTable, {
+    if (shadowDB == null) throw const DatabaseUninitializedException();
+
+    final id = await shadowDB.insert(logTable, {
       'username': username,
       'log_date': date.toIso8601String(),
     });
-    if (id == null) return null;
 
-    return AccessLog(id: id, username: username, date: date);
+    return AccessLog(id, username, date);
   }
 
   /// Returns all the logs in the database.
   ///
   /// Returns `null` if the database is not initialized.
-  Future<List<AccessLog>?> getLogs() async {
-    final logs = await db?.query(logTable);
-    if (logs == null) return null;
+  Future<List<AccessLog>> getLogs() async {
+    final shadowDB = db;
 
+    if (shadowDB == null) throw const DatabaseUninitializedException();
+
+    final logs = await shadowDB.query(logTable);
     return logs.map(AccessLog.fromJson).toList();
   }
 }

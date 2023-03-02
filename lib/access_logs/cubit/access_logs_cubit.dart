@@ -13,19 +13,10 @@ class AccessLogsCubit extends Cubit<AccessLogsState> {
     emit(state.copyWith(status: AccessLogsStatus.loading));
     try {
       final accessLogs = await dataPersistence.getLogs();
-      if (accessLogs != null) {
-        emit(
-          state.copyWith(
-            status: AccessLogsStatus.success,
-            accessLogs: accessLogs,
-          ),
-        );
-        return;
-      }
       emit(
         state.copyWith(
-          status: AccessLogsStatus.failure,
-          error: "couldn't get access logs",
+          status: AccessLogsStatus.success,
+          accessLogs: accessLogs,
         ),
       );
     } catch (e) {

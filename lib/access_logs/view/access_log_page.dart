@@ -3,8 +3,8 @@ import 'package:data_persistence/data_persistence.dart';
 import 'package:flutter/material.dart';
 
 class AccessLogPage extends StatelessWidget {
-  const AccessLogPage({
-    required this.accessLog,
+  const AccessLogPage(
+    this.accessLog, {
     super.key,
   });
 

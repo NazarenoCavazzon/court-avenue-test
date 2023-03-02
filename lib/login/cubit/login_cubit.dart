@@ -7,23 +7,14 @@ part 'login_state.dart';
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit({required this.dataPersistence}) : super(const LoginState());
 
-  Future<void> login({required String username}) async {
+  Future<void> login(String username) async {
     emit(state.copyWith(status: LoginStatus.loading));
     try {
       final accessLog = await dataPersistence.createLog(username);
-      if (accessLog != null) {
-        emit(
-          state.copyWith(
-            status: LoginStatus.success,
-            accessLog: accessLog,
-          ),
-        );
-        return;
-      }
       emit(
         state.copyWith(
-          status: LoginStatus.failure,
-          error: "couldn't create access log",
+          status: LoginStatus.success,
+          accessLog: accessLog,
         ),
       );
     } catch (e) {

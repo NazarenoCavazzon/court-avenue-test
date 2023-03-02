@@ -6,18 +6,18 @@ import 'package:intl/intl.dart';
 /// {@endtemplate}
 class AccessLog extends Equatable {
   /// {@macro access_log}
-  const AccessLog({
-    required this.id,
-    required this.username,
-    required this.date,
-  });
+  const AccessLog(
+    this.id,
+    this.username,
+    this.date,
+  );
 
   /// Creates an [AccessLog] from a JSON object.
   factory AccessLog.fromJson(Map<String, dynamic> json) {
     return AccessLog(
-      id: json['id'] as int,
-      username: json['username'] as String,
-      date: DateTime.parse(json['log_date'] as String),
+      json['id'] as int,
+      json['username'] as String,
+      DateTime.parse(json['log_date'] as String),
     );
   }
 
