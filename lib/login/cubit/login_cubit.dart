@@ -8,6 +8,7 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit({required this.dataPersistence}) : super(const LoginState());
 
   Future<void> login(String username) async {
+    if (state.isLoading) return;
     emit(state.copyWith(status: LoginStatus.loading));
     try {
       final accessLog = await dataPersistence.createLog(username);
