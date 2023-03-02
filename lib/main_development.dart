@@ -13,9 +13,7 @@ Future<void> main() async {
 
   unawaited(
     bootstrap(
-      () => App(
-        dataPesistence: dataPesistence,
-      ),
+      () => App(dataPesistence),
     ),
   );
 }
