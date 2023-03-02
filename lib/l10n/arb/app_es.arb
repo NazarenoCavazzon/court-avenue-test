@@ -43,5 +43,9 @@
     "noAccessLogs": "No hay logs de acceso",
     "@noAccessLogs": {
         "description": "Usado para indicar que no hay logs de acceso"
+    },
+    "noAccessLog": "No hay log de acceso",
+    "@noAccessLog": {
+        "description": "Usado para indicar que no hay log de acceso"
     }
 }

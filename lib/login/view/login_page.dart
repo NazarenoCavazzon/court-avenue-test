@@ -46,15 +46,14 @@ class _LoginViewState extends State<LoginView> {
       onTap: FocusScope.of(context).unfocus,
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           backgroundColor: Colors.black,
-          title: Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              context.l10n.login,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w300,
-              ),
+          title: Text(
+            context.l10n.login,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w300,
             ),
           ),
         ),

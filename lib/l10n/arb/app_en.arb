@@ -43,5 +43,9 @@
     "noAccessLogs": "No access logs",
     "@noAccessLogs": {
         "description": "Text shown when there are no access logs"
+    },
+    "noAccessLog": "No access log",
+    "@noAccessLog": {
+        "description": "Text shown when an access log is null"
     }
 }
